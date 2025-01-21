@@ -41,4 +41,7 @@ jobs:
         with:
           distribution: 'zulu'
           java-version: 17
-      - run: ./gradlew spotlessApply
+      - name: Change wrapper permissions
+        run: chmod +x ./gradlew
+      - name: Build with Gradle
+        run: ./gradlew spotlessApply
