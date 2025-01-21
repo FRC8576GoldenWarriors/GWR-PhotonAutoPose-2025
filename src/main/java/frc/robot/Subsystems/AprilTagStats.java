@@ -45,15 +45,15 @@ public class AprilTagStats extends SubsystemBase {
               Constants.VisionConstants.cameraTranslationConstants.tY,
               Constants.VisionConstants.cameraTranslationConstants.tZ),
           new Rotation3d(
-              ,
+              Constants.VisionConstants.cameraRotationConstants.rRoll,
               Constants.VisionConstants.cameraRotationConstants.rPitch,
-              Constants.VisionConstants.cameraRotationConstants.rYaw));
-
-  // Photon Pose Estimator object
-  private final Drivetrain m_drivetrain = Drivetrain.getInstance();
+              Constants.VisionConstants.cameraRotationConstants.rYaw)); 
+ 
+  // Photon Pose Estimator object 
+  private final Drivetrain m_drivetrain = Drivetrain.getInstance(); 
   // Shuffleboard tab named vision, and 4 different widgets for yaw, pitch, tag id, and distance to
-  // a tag
-  private ShuffleboardTab m_tab;
+  // a tag 
+  private ShuffleboardTab m_tab; 
   private GenericEntry m_yawEntry, m_pitchEntry, m_idEntry, m_distanceEntry, m_tagStatusEntry;
   // Variables to hold all of the widget values
   private double m_yaw, m_pitch, m_distance;
