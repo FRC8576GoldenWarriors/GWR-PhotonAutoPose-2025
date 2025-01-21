@@ -9,6 +9,7 @@ import edu.wpi.first.apriltag.AprilTagFields;
 import edu.wpi.first.math.Matrix;
 import edu.wpi.first.math.VecBuilder;
 import edu.wpi.first.math.estimator.SwerveDrivePoseEstimator;
+import edu.wpi.first.cscore.raw.*;
 import edu.wpi.first.math.geometry.Pose2d;
 import edu.wpi.first.math.geometry.Pose3d;
 import edu.wpi.first.math.geometry.Rotation2d;
@@ -48,21 +49,21 @@ public class AprilTagStats extends SubsystemBase {
               Constants.VisionConstants.cameraRotationConstants.rRoll,
               Constants.VisionConstants.cameraRotationConstants.rPitch,
               Constants.VisionConstants.cameraRotationConstants.rYaw)); 
- 
+  
   // Photon Pose Estimator object 
   private final Drivetrain m_drivetrain = Drivetrain.getInstance(); 
   // Shuffleboard tab named vision, and 4 different widgets for yaw, pitch, tag id, and distance to
-  // a tag 
+  // a tag   
   private ShuffleboardTab m_tab; 
   private GenericEntry m_yawEntry, m_pitchEntry, m_idEntry, m_distanceEntry, m_tagStatusEntry;
-  // Variables to hold all of the widget values
+  // Variables to hold all of the widget values 
   private double m_yaw, m_pitch, m_distance;
   private int m_id;
   private boolean m_tagStatus;
 
-  // Generic starting position of the robot
+  // Generic starting position of the robot 
   // private final Pose3d m_startPose3d = new Pose3d(12.5, 5.5, 0, new Rotation3d());
-  private StructPublisher<Pose2d> m_publisher;
+  private StructPublisher<Pose2d> m_publisher; 
   private PhotonTrackedTarget target;
   private static SwerveDrivePoseEstimator poseEstimator;
   private Field2d field;
@@ -98,8 +99,8 @@ public class AprilTagStats extends SubsystemBase {
                     Constants.SwerveConstants.PoseConfig.kPositionStdDevX,
                     Constants.SwerveConstants.PoseConfig.kPositionStdDevY,
                     Constants.SwerveConstants.PoseConfig.kPositionStdDevTheta)));
-  }
-
+  }  
+  
   @Override
   public void periodic() {
     poseEstimator.update(
