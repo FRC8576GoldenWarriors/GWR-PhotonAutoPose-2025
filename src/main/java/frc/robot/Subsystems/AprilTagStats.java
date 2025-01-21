@@ -45,7 +45,7 @@ public class AprilTagStats extends SubsystemBase {
               Constants.VisionConstants.cameraTranslationConstants.tY,
               Constants.VisionConstants.cameraTranslationConstants.tZ),
           new Rotation3d(
-              Constants.VisionConstants.cameraRotationConstants.rRoll,
+              ,
               Constants.VisionConstants.cameraRotationConstants.rPitch,
               Constants.VisionConstants.cameraRotationConstants.rYaw));
 
